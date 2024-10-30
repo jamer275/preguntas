@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('fondo3.jpg'); /* Cambia 'fondo.jpg' por la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* La imagen de fondo permanece fija al hacer scroll */
+    background-color: #4d4d57;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #b31313;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1000px;
+    padding: 40px;
+}
+
+.gallery a {
+    text-decoration: none;
+}
+
+.gallery img {
+    width: 110%;
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen sin distorsionar */
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin-top: 10px;
+    }
+}

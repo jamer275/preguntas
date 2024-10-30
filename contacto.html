@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .formulario-contacto {
+            background-color: #ff0000;
+            padding: 20px;
+            border-radius: 10px;
+            color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .formulario-contacto h2 {
+            margin-top: 0;
+        }
+
+        .formulario-contacto input, 
+        .formulario-contacto textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .formulario-contacto button {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .formulario-contacto button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="formulario-contacto">
+    <h2>Formulario de Contacto</h2>
+    <form action="enviar_correo.php" method="post">
+        <input type="text" name="nombre" placeholder="Nombre y Apellido" required>
+        <input type="email" name="correo" placeholder="Correo Electrónico" required>
+        <input type="tel" name="telefono" placeholder="Número de Celular" required>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+</body>
+</html>
